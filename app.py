@@ -3,19 +3,19 @@ import qrcode
 
 st.title("QRify")
 
-data = st.text_input("Enter a URL or Text of a website :) ")
+data = st.text_input("Enter a URL or Text of a website :)")
 
-if st.button("QRify!"): #used for button creation
+if st.button("QRify!"):
     if data:
         img = qrcode.make(data)
 
-        img.save("QRcode.png")   # Save first
+        # Save QR code
+        img.save("QRcode.png")
 
-        st.image("QRcode.png")   # Display the saved image
+        # Display QR code
+        st.image("QRcode.png")
 
-        st.success("QRify generated a QR for your website!")
-
-  # Download button
+        # Download button
         with open("QRcode.png", "rb") as file:
             st.download_button(
                 label="📥 Download QR Code",
@@ -24,9 +24,7 @@ if st.button("QRify!"): #used for button creation
                 mime="image/png"
             )
 
-        st.success("QRify generated a QR for your website!")
+        st.success("🎉 QRify generated a QR code successfully!")
 
     else:
-        st.warning("Please enter some text first!")    
-else:
         st.warning("Please enter some text first!")
