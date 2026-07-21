@@ -11,6 +11,7 @@ This is one of my beginner Python projects and I'll keep improving it as I learn
 - qrcode
 - Jupyter Notebook
 
+Plus you can also download your qr code 
 ### Author
 Shreya Menon
 
